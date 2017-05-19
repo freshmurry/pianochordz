@@ -4,11 +4,10 @@
     <title>PianoChordz | Learn to Play the Keyboard</title>
     
     <meta name="description" content="Learn to play the keyboard right along with your favorite song and impress your friends and family!"/>
+    <meta name="keywords" content="keyboard, learn to play the keyboard, church musician, Online Piano Lessons, Learn to play the keyboard online"/>
     
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    
-    <meta name="keyword" content="Piano Lessons, Learn to play the keyboard"/>
     
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -25,38 +24,39 @@
         margin-left: 40px;
       }
     </style>
+    
   </head>
-<body>
-
-  <nav>
-    <div class="nav-wrapper">
-      <%= link_to 'PianoChordz', root_path, :class => "brand-logo" %>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="<%= root_path %>"><i class="mdi-action-view-list"></i></a></li>
-      	<li><a href="<%= pages_about_path %>"><i class="mdi-action-perm-identity"></i></a></li>
-      	<li><a href="<%= pages_contact_path %>"><i class="mdi-maps-place"></i></a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-      	<li><a href="<%= root_path %>"><i class="mdi-action-view-list"></i></a></li>
-      	<li><a href="<%= pages_about_path %>"><i class="mdi-action-perm-identity"></i></a></li>
-      	<li><a href="<%= pages_contact_path %>"><i class="mdi-maps-place"></i></a></li>
-      </ul>
+  <body>
+  
+    <nav>
+      <div class="nav-wrapper">
+        <%= link_to 'PianoChordz', root_path, :class => "brand-logo" %>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="<%= root_path %>"><i class="mdi-action-view-list"></i></a></li>
+        	<li><a href="<%= pages_about_path %>"><i class="mdi-action-perm-identity"></i></a></li>
+        	<li><a href="<%= pages_contact_path %>"><i class="mdi-maps-place"></i></a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+        	<li><a href="<%= root_path %>"><i class="mdi-action-view-list"></i></a></li>
+        	<li><a href="<%= pages_about_path %>"><i class="mdi-action-perm-identity"></i></a></li>
+        	<li><a href="<%= pages_contact_path %>"><i class="mdi-maps-place"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+  
+    <div class="row">
+    	<div class="col m10 offset-m1">
+    		<%= yield %>
+    	</div>
     </div>
-  </nav>
-
-<div class="row">
-	<div class="col m10 offset-m1">
-		<%= yield %>
-	</div>
-</div>
-
-<script>
-	 $(".button-collapse").sideNav();
-</script>
-
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
-</body>
+    
+    <script>
+    	 $(".button-collapse").sideNav();
+    </script>
+  
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  
+  </body>
 </html>

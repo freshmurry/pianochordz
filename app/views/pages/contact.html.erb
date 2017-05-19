@@ -1,9 +1,10 @@
 <h3>Contact</h3>
 
 <div class="card z-depth-3">
-	<div class="card-content white-text">
+	<div class="card-content
+">
 		<p>Lets Chat! Find me on the map and we can have some drinks</p>
-		<br/>
+		</br>
 		<div id="map-canvas"></div>		
 	</div>
 </div>
@@ -20,16 +21,16 @@
   function initialize() {
     var mapCanvas = document.getElementById('map-canvas');
     var mapOptions = {
-      center: new google.maps.LatLng(41.8339043, -88.0123469),
+      center: new google.maps.LatLng(41.881832, -87.623177),
       zoom: 14,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     var map = new google.maps.Map(mapCanvas, mapOptions);
     var marker = new google.maps.Marker({
-    	position: new google.maps.LatLng(41.8339043, -88.0123469),
-    	title: "Welcome to Lombard, IL!"
+    	position: new google.maps.LatLng(41.881832, -87.623177),
+    	title: "Welcome to Chicago!"
     });
     marker.setMap(map);
   }
   google.maps.event.addDomListener(window, 'load', initialize);
-</script>	`
+</script>
